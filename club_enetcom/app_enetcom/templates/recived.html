@@ -1,0 +1,12 @@
+{% extends 'compte2.html' %}
+ {% block title %}
+ ChatBox
+ {% endblock %}
+{% block content %}
+  <h2>Messages reçus</h2>
+  <ul>
+    {% for message in received_messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

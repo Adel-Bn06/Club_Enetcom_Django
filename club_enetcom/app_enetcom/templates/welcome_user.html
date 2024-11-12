@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {{club.nom}}
+        {% endblock %}
+    </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #074f9b;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .dropdown-menu {
+            background-color: #074f9b;
+        }
+
+        .dropdown-item {
+            color: #ffffff !important;
+        }
+        .dropdown-item:hover {
+            color: orangered !important;
+        }
+
+
+        .rounded-circle {
+            width: 30px;
+        }
+
+        /* Style pour le titre de bienvenue */
+        #welcome-title {
+            font-size: 2rem; /* Taille de la police */
+            font-weight: bold;
+            color: #333; /* Couleur du texte */
+            text-align: center; /* Alignement */
+            margin-bottom: 30px; /* Marge en bas */
+        }
+    </style>
+</head>
+<body>
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: orangered; font-weight: bold;font-size: 26px;font-family: Lucida Handwriting;">Club Enet'Com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Actualités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'chatbox' %}">ChatBox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Souvenirs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bureau exécutif</a>
+                    </li>
+                    {% if request.user.presidentclubi %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_membre' %}">Ajouter membre</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Clubs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            {% for club in user_clubs %}
+                            <a class="dropdown-item" href="{{club.id}}">{{club.nom}}</a>
+                            <div class="dropdown-divider"></div>
+                            {% endfor %}
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://image.shutterstock.com/image-vector/blank-avatar-photo-place-holder-260nw-1095249842.jpg" alt="Profile Image" class="rounded-circle mr-2">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            
+                            <a class="dropdown-item" href="{% url 'user_logout' %}">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+
+    {% block content %}
+    <div class="container pt-5" id="welcome-title">
+      <h1>Bienvenue {{request.user.username}} {{request.user.last_name}} dans votre compte</h1>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

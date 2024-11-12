@@ -1,0 +1,307 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Enet'Com</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .club-logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: #074f9b;
+        }
+
+        .navbar-brand img {
+            width: 120px;
+            height: auto;
+            margin-top: -10px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .jumbotron {
+            background-image: url('https://enetcom.rnu.tn/storage/banners/n7cC7myq71QIMyw3oFeWPjvSs2UsZMXTgsxv3RKj.jpg');
+            height: 600px;
+            
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .jumbotron h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-top: 190px;
+        }
+
+        .card {
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .footer {
+            background-color: #074f9b;
+            color: #ffffff;
+            padding: 50px 0;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+        }
+
+        .social-icons .fab {
+            padding-top: 1%;
+            font-size: 24px;
+            margin-right: 10px;
+            color: #ffffff;
+        }
+        .social-icons .fab:hover {
+            color: orangered;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand " href="#" style="color: orangered; font-weight: bold;font-size: 26px;font-family: Lucida Handwriting;"><span>Club Enet'Com</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acceuil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Actualités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ChatBox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Bienvenue dans votre espace de club</h1>
+        </div>
+    </div>
+
+    <!-- Les Actualités -->
+    <div class="container">
+        <h2 class="text-center mb-4">Actualités</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- img src="{% static 'activity1.jpg' %}" class="card-img-top" alt="Activity Image"-->
+                    <div class="card-body">
+                        <h5 class="card-title">Orbeats Club Enetcom</h5>
+                        <p class="card-text">Description de l'activité 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button class="btn btn-primary" style="background-color: #074f9b;">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- img src="{% static 'activity1.jpg' %}" class="card-img-top" alt="Activity Image"-->
+                    <div class="card-body">
+                        <h5 class="card-title">Orbeats Club Enetcom</h5>
+                        <p class="card-text">Description de l'activité 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button class="btn btn-primary" style="background-color: #074f9b;">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- img src="{% static 'activity1.jpg' %}" class="card-img-top" alt="Activity Image"-->
+                    <div class="card-body">
+                        <h5 class="card-title">Orbeats Club Enetcom</h5>
+                        <p class="card-text">Description de l'activité 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button class="btn btn-primary" style="background-color: #074f9b;">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- img src="{% static 'activity1.jpg' %}" class="card-img-top" alt="Activity Image"-->
+                    <div class="card-body">
+                        <h5 class="card-title">Orbeats Club Enetcom</h5>
+                        <p class="card-text">Description de l'activité 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button class="btn btn-primary" style="background-color: #074f9b;">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- img src="{% static 'activity1.jpg' %}" class="card-img-top" alt="Activity Image"-->
+                    <div class="card-body">
+                        <h5 class="card-title">Orbeats Club Enetcom</h5>
+                        <p class="card-text">Description de l'activité 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button class="btn btn-primary" style="background-color: #074f9b;">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <!-- img src="{% static 'activity1.jpg' %}" class="card-img-top" alt="Activity Image"-->
+                    <div class="card-body">
+                        <h5 class="card-title">Orbeats Club Enetcom</h5>
+                        <p class="card-text">Description de l'activité 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button class="btn btn-primary" style="background-color: #074f9b;" data-toggle="modal" data-target="#exampleModal">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title" id="exampleModalLabel">Orbeats Club Enetcom</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Titre de l'événement : Soirée Spéciale Radiophonique</h4>
+                            <h5>Voyage Musical à Travers les Décennies</h5>
+                            <p><strong>Date :</strong> Samedi 15 Juin 2024</p>
+                            <p><strong>Heure :</strong> 18h00 - 22h00</p>
+                            <p><strong>Lieu :</strong> Studio Radio XYZ, 123 Rue de la Radiophonie, Paris</p>
+                            <hr>
+                            <h5>Description :</h5>
+                            <p>Rejoignez-nous pour une soirée exceptionnelle en direct sur Radio XYZ, où nous vous emmenons dans un voyage musical à travers les décennies ! Cet événement unique célèbrera les moments forts de la musique des années 60 à nos jours, avec des morceaux emblématiques qui ont marqué chaque époque.</p>
+                            <hr>
+                            <h5>Programme de la soirée :</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <strong>18h00 - 19h00 : Années 60 - Le Temps des Yéyés</strong>
+                                    <p>Plongez dans les années 60 avec les icônes du rock'n'roll, les ballades des Beatles, et les mélodies intemporelles d'Elvis Presley. Revivez l'époque des yéyés et de la révolution musicale.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>19h00 - 20h00 : Années 70 - L'Ère du Disco et du Rock</strong>
+                                    <p>Vibrez au son du disco, du punk et du rock progressif avec des artistes légendaires comme ABBA, Queen, et Led Zeppelin. Une heure dédiée à la musique énergique et festive des années 70.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>20h00 - 21h00 : Années 80 - Synthétiseurs et New Wave</strong>
+                                    <p>Redécouvrez les années 80 avec des synthétiseurs envoûtants, des hits new wave, et des icônes pop comme Michael Jackson, Madonna, et Depeche Mode. Un retour aux couleurs vives et aux sons électroniques.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>21h00 - 22h00 : Années 90 à Aujourd'hui - Diversité et Innovations</strong>
+                                    <p>Terminez la soirée avec une sélection de titres des années 90 à nos jours, allant du grunge au hip-hop, en passant par la musique électronique et les hits contemporains. Des artistes comme Nirvana, Daft Punk, et Beyoncé seront à l'honneur.</p>
+                                </li>
+                            </ul>
+                            <hr>
+                            <h5>Interactivité et Surprises :</h5>
+                            <ul>
+                                <li><strong>Dédicaces en Direct :</strong> Envoyez vos messages et dédicaces via les réseaux sociaux ou par téléphone, et écoutez-les en direct à l'antenne.</li>
+                                <li><strong>Invités Spéciaux :</strong> Des invités surprises, incluant des artistes et des personnalités du monde de la musique, partageront leurs anecdotes et souvenirs.</li>
+                                <li><strong>Jeux et Concours :</strong> Participez à nos jeux et concours pour tenter de gagner des goodies et des places de concert.</li>
+                            </ul>
+                            <hr>
+                            <h5>Comment Participer :</h5>
+                            <ul>
+                                <li><strong>À la Radio :</strong> Branchez-vous sur Radio XYZ à la fréquence 101.5 FM.</li>
+                                <li><strong>En Ligne :</strong> Écoutez-nous en direct sur notre site web <a href="http://www.radioxyz.fr" target="_blank">www.radioxyz.fr</a> ou via notre application mobile disponible sur iOS et Android.</li>
+                                <li><strong>Sur les Réseaux Sociaux :</strong> Suivez-nous sur Facebook, Twitter, et Instagram pour des mises à jour en temps réel et des contenus exclusifs.</li>
+                            </ul>
+                            <p>Ne manquez pas cette soirée spéciale qui promet de raviver vos souvenirs et de vous faire vibrer au son des plus grands hits de chaque décennie. Rendez-vous le 15 juin pour une immersion musicale inoubliable !</p>
+                            <hr>
+                            <h5>Contacts :</h5>
+                            <p><strong>Email :</strong> contact@radioxyz.fr</p>
+                            <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Participate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+  
+            
+
+            <!-- Ajoutez d'autres cartes ici -->
+        </div>
+    </div>
+
+    <!-- Login -->
+    <section class="container my-5" id="login">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Connectez-vous</h2>
+                        <form method="post" action="">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary btn-block" style="background-color: #074f9b;">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Contact</p>
+            <p><strong>Email:</strong> clubenetcom@enetcom.usf.tn</p>
+            <p><strong>Téléphone:</strong> +216 75 009 008</p>
+            <p><strong>Adresse:</strong> Cité el Ons, Sfax</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>            
+        </div>
+    </footer>
+   
+    <!-- Bootstrap JS et Popper.js (obligatoire pour Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
